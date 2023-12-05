@@ -1,0 +1,67 @@
+/* Home */
+
+.Home {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: aliceblue; */
+}
+
+.heroTextContainer {
+  text-align: left !important;
+  line-height: 5vh;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.HeroText1 {
+  font-size: 9vh;
+  color: #FFFFFE;
+  font-weight: 700;
+}
+
+.HeroText2 {
+  font-size: 9vh;
+  color: #FF8906;
+  font-weight: 700;
+}
+
+.HeroText3 {
+  font-size: 3vh;
+  color: #A7A9BE;
+  font-weight: 300;
+  line-height: 1vh;
+}
+
+
+
+
+/* About */
+.about {
+  text-align: left;
+  /* background-color: aqua; */
+  height: 100vh;
+  width: 100vw;
+
+  .aboutHeroTxt {
+    font-size: 8vw;
+    color: #FF8906;
+    font-weight: 800;
+    letter-spacing: 0.1vw;
+    left: 5%;
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(10vh);
+  }
+
+  .aboutText {
+    padding-top: 1%;
+    line-height: 2vh;
+    left: 5%;
+    color: #A7A9BE;
+    position: absolute;
+    transform: translateY(30vh);
+    max-width: 38.5vw;
+  }
+}
