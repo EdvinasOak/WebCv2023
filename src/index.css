@@ -11,8 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0F0E17;
-  overflow: scroll;
+
+  background: #0F0E17;
+  background: linear-gradient(146deg, rgba(28, 26, 51, 1) 7%, rgba(15, 14, 23, 1) 20%);
 
   margin: 0;
   padding: 0;
