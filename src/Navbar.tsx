@@ -3,8 +3,8 @@ const Navbar = () => {
         <div className='Navbar'>
             <li>Home</li>
             <li>About Me</li>
-            <li>Expierence</li>
             <li>Skills</li>
+            <li>Experience</li>
             <li>Contact Me</li>
         </div>
       );
