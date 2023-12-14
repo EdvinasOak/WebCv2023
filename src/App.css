@@ -42,6 +42,8 @@
   height: 100vh;
   width: 100vw;
 
+
+
   .aboutHeroTxt {
     font-size: 8vw;
     color: #FF8906;
@@ -58,14 +60,75 @@
     line-height: 2.5vh;
     left: 8.4%;
     color: #A7A9BE;
-    position: absolute;
-    transform: translateY(30vh);
+    /* position: absolute; */
+    transform: translate(-2vw, 30vh);
     max-width: 38.5vw;
     font-size: 2vh;
     font-weight: 500;
   }
-}
 
+  .aboutTextColumn1 {
+    font-size: 55px;
+    height: 100%;
+    width: 50vw;
+    transform: translateX(10vw);
+    z-index: 1;
+    min-width: 500px;
+  }
+
+  .aboutTextColumn2 {
+    color: #FFFFFE;
+    font-size: 55px;
+    z-index: 1;
+    height: 100%;
+    width: 50vw;
+    min-width: 500px;
+    /* margin-left: 29vw; */
+  }
+
+  .aboutFlexContainer {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+  }
+
+  .blobAbout {
+    height: 60vh;
+    transform: translate(10%, 40%);
+  }
+
+  .mePic {
+    overflow: hidden;
+    height: 93%;
+    /* width: 592px; */
+    position: absolute;
+    transform: translate(-75%, -3vh);
+    object-fit: fill;
+  }
+
+  .blobAbout2 {
+    transform: translate(-35%, -3vh);
+    position: absolute;
+  }
+
+  .blobAbout3 {
+    transform: translate(-7%, 65vh);
+    position: absolute;
+  }
+
+  .blobAbout4 {
+    transform: translate(-158%, 55vh);
+    position: absolute;
+    object-fit: fill;
+    height: 47%;
+  }
+
+
+}
 
 
 

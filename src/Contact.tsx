@@ -25,8 +25,8 @@ const Contact = () => {
 							placeholder='Message'
 							name='message'
 						/>
-						<button type='button'>Submit</button>
 					</form>
+					<button type='button'>Submit</button>
 				</div>
 				<div className='flex-item-2'>
 					<div className='socialsContainer'>
