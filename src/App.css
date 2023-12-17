@@ -155,28 +155,30 @@
   text-align: center;
   z-index: 1000;
 
+
+  li {
+    list-style-type: none;
+    color: #fffffe;
+    cursor: pointer;
+
+    padding: 1vh 50px;
+    text-decoration: none;
+    font-size: calc(11px + 0.390625vw);
+    display: inline-block;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  li:hover {
+
+    text-shadow: #fffffe 1px 0 10px;
+    transition: all 0.1s ease-in-out;
+  }
+
 }
 
-li {
-  list-style-type: none;
-  color: #fffffe;
-  cursor: pointer;
-
-  padding: 1vh 50px;
-  text-decoration: none;
-  font-size: calc(11px + 0.390625vw);
-  display: inline-block;
-
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-li:hover {
-
-  text-shadow: #fffffe 1px 0 10px;
-  transition: all 0.1s ease-in-out;
-}
 
 
 /* Skills */
@@ -203,22 +205,190 @@ li:hover {
 /* Experience */
 
 .Experience {
-  height: 100vh;
-  width: 100vw;
-  text-align: left;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
 
   .experienceHeroTxt {
     font-size: 8vw;
     color: #FF8906;
     font-weight: 800;
     letter-spacing: 0.1vw;
-    left: 8%;
-    position: absolute;
-    transform: translateY(10vh);
+
+    padding-left: 3vw;
+    overflow: hidden;
+    padding-top: 50px;
   }
 
 }
 
+.heroTxtItem {
+  grid-area: heroTxtItem;
+  height: auto;
+  overflow: hidden;
+}
+
+.jobItem {
+  grid-area: jobItem;
+  color: #FFFFFE;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 25px;
+  padding-top: 40px;
+}
+
+.jobItem2 {
+  grid-area: jobItem2;
+  color: #FFFFFE;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 40px;
+}
+
+.jobLine {
+  grid-area: jobLine;
+  margin-top: 5vh;
+  padding-top: 10px;
+
+}
+
+.jobLine2 {
+  grid-area: jobLine2;
+  padding-top: 8px;
+  padding-top: 30px;
+}
+
+.descriptionItem {
+  grid-area: descriptionItem;
+  color: #A7A9BE;
+  text-align: left;
+  margin-right: 10vw;
+  margin-top: 5vh;
+  font-size: 20px;
+  padding-top: 40px;
+}
+
+.descriptionItem2 {
+  grid-area: descriptionItem2;
+  color: #A7A9BE;
+  text-align: left;
+  margin-right: 10vw;
+  font-size: 20px;
+  padding-top: 40px;
+}
+
+
+.grid-container {
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1.5fr;
+  grid-template-areas:
+    'heroTxtItem heroTxtItem heroTxtItem'
+    'jobItem jobLine  descriptionItem'
+    'jobItem jobLine  descriptionItem'
+    'jobItem2 jobLine2  descriptionItem2';
+
+  gap: 10px;
+  padding-top: 5vw;
+}
+
+.grid-container>div {
+  overflow: hidden;
+}
+
+
+.heroTxtItem {
+  grid-area: heroTxtItem;
+  height: auto;
+  overflow: hidden;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: #FF8906;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.circleTwo {
+  height: 25px;
+  width: 25px;
+  background-color: #E53170;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.dotCircle {
+  height: 35px;
+  width: 35px;
+  background-color: #bbbbbb00;
+  border: 2px #FFFFFE;
+  border-style: dashed;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  transform: translateY(-82%);
+}
+
+.verticalLine {
+  margin-left: 48%;
+  margin-top: 10%;
+  display: block;
+  border-left: 6px dashed #FFFFFE;
+  height: 95%;
+  margin-top: -11%;
+}
+
+@media (width < 1024px) {
+
+  .grid-container {
+    grid-template-columns: 0.3fr 1.5fr;
+    grid-template-areas:
+      'heroTxtItem heroTxtItem'
+      'jobLine  jobItem'
+      'jobLine  descriptionItem'
+      'jobLine2  jobItem2'
+      ' jobLine2  descriptionItem2';
+  }
+
+  .heroTxtItem {
+    height: auto;
+    text-align: center;
+  }
+
+  .jobItem {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .jobItem2 {
+    text-align: left;
+
+  }
+
+  .jobLine {
+    margin-top: 0;
+
+  }
+
+  .dotCircle {
+    left: 6.6%;
+  }
+
+  .descriptionItem2,
+  .descriptionItem {
+    margin-right: 1vw;
+    margin-top: 0;
+  }
+
+  .experienceHeroTxt {
+    font-size: 15vw !important;
+  }
+}
 
 /* Contact */
 
