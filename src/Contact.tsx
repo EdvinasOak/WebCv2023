@@ -1,10 +1,11 @@
 const Contact = () => {
 	return (
 		<div className='Contact'>
-			<a className='contactHeroTxt'>Contact</a>
-
-			<div className='flexContainer'>
-				<div className='flex-item-1'>
+			<div className='contactGridContainer'>
+				<div className='contactHeroTxtItem'>
+					<a className='contactHeroTxt'>Contact</a>
+				</div>
+				<div className='contactFormItem'>
 					<form className='contactForm'>
 						<input
 							className='email'
@@ -28,7 +29,11 @@ const Contact = () => {
 					</form>
 					<button type='button'>Submit</button>
 				</div>
-				<div className='flex-item-2'>
+				<div className='blobContact' />
+				<div className='blobContact2' />
+				<div className='blobContact3' />
+
+				<div className='contactSocialsItem'>
 					<div className='socialsContainer'>
 						<img
 							className='socialsLogo'
@@ -38,12 +43,17 @@ const Contact = () => {
 						<img
 							className='socialsLogo'
 							src='src/assets/CodePen.svg'
-							alt='Linked In'
+							alt='Code pen'
 						/>
 						<img
 							className='socialsLogo'
 							src='src/assets/Dribble.svg'
-							alt='Linked In'
+							alt='Dribble'
+						/>
+						<img
+							className='socialsLogo'
+							src='src/assets/Behance.svg'
+							alt='Behance'
 						/>
 						<img
 							className='socialsLogo'
@@ -53,21 +63,6 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
-			<img
-				className='blobContact'
-				src='src/assets/sw-js-blob-svg.svg'
-				alt='My Happy SVG'
-			/>
-			<img
-				className='blobContact2'
-				src='src/assets/sw-js-blob-svg2.svg'
-				alt='My Happy SVG'
-			/>
-			<img
-				className='blobContact3'
-				src='src/assets/sw-js-blob-svg3.svg'
-				alt='My Happy SVG'
-			/>
 		</div>
 	);
 };
