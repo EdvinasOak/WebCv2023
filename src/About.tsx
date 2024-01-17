@@ -1,6 +1,20 @@
-const About = () => {
+import { useEffect, useRef, forwardRef, ForwardedRef } from 'react';
+
+const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
+	const aboutRef = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		if (ref) {
+			if (typeof ref === 'function') {
+				ref(aboutRef.current);
+			} else {
+				ref.current = aboutRef.current;
+			}
+		}
+	}, [ref]);
+
 	return (
-		<div className='about'>
+		<div ref={aboutRef} className='about'>
 			<div className='aboutGridContainer'>
 				<div className='aboutImageItem'>
 					<div className='aboutImageGridContainer'>
@@ -52,6 +66,6 @@ const About = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default About;

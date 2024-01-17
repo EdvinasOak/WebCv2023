@@ -274,52 +274,7 @@
 
 }
 
-/* Navbar */
 
-.Navbar {
-  position: fixed;
-  top: 5%;
-  width: 93%;
-  height: 5vh;
-  height: calc(45px + 0.390625vh);
-
-  max-height: 80px;
-  font-weight: 600;
-  border-radius: 14px;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  background: rgba(155, 155, 155, 0.06);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(8.5px);
-
-  text-align: center;
-  z-index: 1000;
-
-
-  li {
-    list-style-type: none;
-    color: #fffffe;
-    cursor: pointer;
-
-    padding: 1vh 50px;
-    text-decoration: none;
-    font-size: calc(11px + 0.390625vw);
-    display: inline-block;
-
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  li:hover {
-
-    text-shadow: #fffffe 1px 0 10px;
-    transition: all 0.1s ease-in-out;
-  }
-
-}
 
 
 
@@ -729,7 +684,7 @@ button {
   color: #FFFFFE;
   font-weight: 600;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 100;
 
 }
 

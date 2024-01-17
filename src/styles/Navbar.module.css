@@ -1,0 +1,129 @@
+/* Navbar */
+
+.Navbar {
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    .NavbarDesktop {
+        position: fixed;
+        top: 5%;
+        width: 93%;
+        height: 5vh;
+        height: calc(45px + 0.390625vh);
+        /* max-height: 80px; */
+        font-weight: 600;
+        border-radius: 14px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(155, 155, 155, 0.06);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(8.5px);
+        z-index: 1000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menuItem {
+        list-style-type: none;
+        color: #fffffe;
+        cursor: pointer;
+        padding: 0vh 4vw;
+        text-decoration: none;
+        font-size: calc(11px + 0.390625vw);
+    }
+
+    #menuItem:hover {
+        text-shadow: #fffffe 1px 0 10px;
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+@media (width < 550px) {
+    .Navbar {
+        .NavbarDesktop {
+            left: 9%;
+            top: 5%;
+            width: 55px;
+
+        }
+    }
+
+    .open {
+        .NavbarDesktop {
+            left: 50%;
+            top: 50% !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            flex-direction: column;
+
+            .burgerMenu {
+                display: inline-block;
+                padding-top: 0;
+                margin-top: 0;
+                left: 6%;
+                top: 4%;
+                width: 55px;
+                position: fixed;
+            }
+
+            #menuItem {
+                display: block;
+                font-size: calc(40px + 0.390625vw);
+            }
+        }
+
+    }
+
+    #menuItem {
+
+        display: none;
+
+    }
+
+    #menuItem:hover {
+        text-shadow: #fffffe 1px 0 10px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .burgerMenu {
+        display: inline-block;
+        /* padding-top: 40%; */
+        /* transition: .3s ease-in-out; */
+        margin-top: 10%;
+    }
+
+    .active {
+
+
+
+        .bar1 {
+            transform: rotate(-45deg) translate(-3px, 5px)
+        }
+
+        .bar2 {
+            opacity: 0;
+        }
+
+        .bar3 {
+            transform: rotate(45deg) translate(-7px, -5px);
+        }
+
+
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        display: block;
+        width: 30px;
+        height: 5px;
+        border-top: 2px solid #FFFFFE;
+        transition: .2s ease-in-out;
+    }
+
+}
