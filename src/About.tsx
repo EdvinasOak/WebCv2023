@@ -2,7 +2,7 @@ import { useEffect, useRef, forwardRef, ForwardedRef } from 'react';
 
 const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	const aboutRef = useRef<HTMLDivElement | null>(null);
-
+	console.log('props', props);
 	useEffect(() => {
 		if (ref) {
 			if (typeof ref === 'function') {

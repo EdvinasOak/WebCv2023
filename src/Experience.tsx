@@ -3,6 +3,7 @@ import { ForwardedRef, forwardRef, useEffect, useRef } from 'react';
 const Experience = forwardRef(
 	(props, ref: ForwardedRef<HTMLDivElement | null>) => {
 		const experienceRef = useRef<HTMLDivElement | null>(null);
+		console.log('props', props);
 
 		useEffect(() => {
 			if (ref) {

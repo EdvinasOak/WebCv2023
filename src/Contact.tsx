@@ -16,6 +16,7 @@ const Contact = forwardRef(
 		const [subject, setSubject] = useState('');
 		const [message, setMessage] = useState('');
 		const [emailError, setEmailError] = useState<string | null>(null);
+		console.log('props', props);
 
 		const validateEmail = (email: string): boolean => {
 			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

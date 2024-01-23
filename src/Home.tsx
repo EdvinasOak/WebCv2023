@@ -3,6 +3,7 @@ import HomeCss from './styles/Home.module.css';
 
 const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	const homeRef = useRef<HTMLDivElement | null>(null);
+	console.log('props', props);
 
 	useEffect(() => {
 		if (ref) {
