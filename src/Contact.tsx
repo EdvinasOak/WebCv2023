@@ -7,6 +7,7 @@ import {
 	ChangeEvent,
 } from 'react';
 import emailjs from '@emailjs/browser';
+import ContactCss from './styles/Contact.module.css';
 
 const Contact = forwardRef(
 	(props, ref: ForwardedRef<HTMLDivElement | null>) => {
@@ -70,16 +71,18 @@ const Contact = forwardRef(
 		}, [ref]);
 
 		return (
-			<div ref={contactRef} className='Contact'>
-				<div className='contactGridContainer'>
-					<div className='contactHeroTxtItem'>
-						<a className='contactHeroTxt'>Contact</a>
+			<div ref={contactRef} className={ContactCss.Contact}>
+				<div className={ContactCss.contactGridContainer}>
+					<div className={ContactCss.contactHeroTxtItem}>
+						<a className={ContactCss.contactHeroTxt}>Contact</a>
 					</div>
-					<div className='contactFormItem'>
-						<form className='contactForm'>
-							{emailError && <div className='error'>{emailError}</div>}
+					<div className={ContactCss.contactFormItem}>
+						<form className={ContactCss.contactForm}>
+							{emailError && (
+								<div className={ContactCss.error}>{emailError}</div>
+							)}
 							<input
-								className='email'
+								className={ContactCss.email}
 								type='text'
 								placeholder='Email'
 								name='email'
@@ -88,7 +91,7 @@ const Contact = forwardRef(
 							/>
 							<br />
 							<input
-								className='subject'
+								className={ContactCss.subject}
 								type='text'
 								placeholder='Subject'
 								name='subject'
@@ -99,7 +102,7 @@ const Contact = forwardRef(
 							/>
 							<br></br>
 							<textarea
-								className='message'
+								className={ContactCss.message}
 								placeholder='Message'
 								name='message'
 								value={message}
@@ -112,12 +115,12 @@ const Contact = forwardRef(
 							Submit
 						</button>
 					</div>
-					<div className='blobContact' />
-					<div className='blobContact2' />
-					<div className='blobContact3' />
+					<div className={ContactCss.blobContact} />
+					<div className={ContactCss.blobContact2} />
+					<div className={ContactCss.blobContact3} />
 
-					<div className='contactSocialsItem'>
-						<div className='socialsContainer'>
+					<div className={ContactCss.contactSocialsItem}>
+						<div className={ContactCss.socialsContainer}>
 							<a
 								href='https://www.linkedin.com/in/edvinasaukstakalnis/'
 								target='_blank'
@@ -130,7 +133,7 @@ const Contact = forwardRef(
 									viewBox='0 0 56 63'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'
-									className='socialsLogo'
+									className={ContactCss.socialsLogo}
 								>
 									<path d='M49.3333 0H6.66667C2.98667 0 0 3.36 0 7.5V55.5C0 59.64 2.98667 63 6.66667 63H49.3333C53.0133 63 56 59.64 56 55.5V7.5C56 3.36 53.0133 0 49.3333 0ZM17.3333 24V52.5H9.33333V24H17.3333ZM9.33333 15.705C9.33333 13.605 10.9333 12 13.3333 12C15.7333 12 17.24 13.605 17.3333 15.705C17.3333 17.805 15.84 19.5 13.3333 19.5C10.9333 19.5 9.33333 17.805 9.33333 15.705ZM46.6667 52.5H38.6667C38.6667 52.5 38.6667 38.61 38.6667 37.5C38.6667 34.5 37.3333 31.5 34 31.44H33.8933C30.6667 31.44 29.3333 34.53 29.3333 37.5C29.3333 38.865 29.3333 52.5 29.3333 52.5H21.3333V24H29.3333V27.84C29.3333 27.84 31.9067 24 37.08 24C42.3733 24 46.6667 28.095 46.6667 36.39V52.5Z' />
 								</svg>
@@ -146,7 +149,7 @@ const Contact = forwardRef(
 									viewBox='0 0 67 75'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'
-									className='socialsLogo'
+									className={ContactCss.socialsLogo}
 								>
 									<path d='M33.5001 6L5.36011 26.0156V48.9785L33.5001 69L61.6401 48.9844V26.0156L33.5001 6ZM33.5001 43.7754L25.5491 37.6055L33.5001 31.5352L41.4511 37.6055L33.5001 43.7754ZM36.1801 26.4082V14.9238L54.1759 27.7266L46.1097 33.9844L36.1801 26.4082ZM30.8201 26.4082L20.8905 33.9844L12.8243 27.7266L30.8201 14.9238V26.4082ZM16.2057 37.5645L10.7201 41.7481V33.3047L16.2057 37.5645ZM20.8643 41.1797L30.8201 48.9082V60.0762L12.8505 47.291L20.8643 41.1797ZM36.1801 48.9082L46.1359 41.1797L54.1497 47.291L36.1801 60.0762V48.9082ZM50.7945 37.5645L56.2801 33.3047V41.7481L50.7945 37.5645Z' />
 								</svg>
@@ -162,7 +165,7 @@ const Contact = forwardRef(
 									viewBox='0 0 56 63'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'
-									className='socialsLogo'
+									className={ContactCss.socialsLogo}
 								>
 									<path d='M10.08 5.04004C6.98878 5.04004 4.47998 7.86244 4.47998 11.34V51.66C4.47998 55.1376 6.98878 57.96 10.08 57.96H45.92C49.0112 57.96 51.52 55.1376 51.52 51.66V11.34C51.52 7.86244 49.0112 5.04004 45.92 5.04004H10.08ZM29.3103 13.86C31.5167 13.86 33.6 16.0902 33.6 27.09C33.6 31.0212 33.0054 36.7301 30.9334 41.4299C31.8294 42.7403 32.7264 43.155 33.32 42.84C35 41.9328 36.0745 38.7453 37.0825 35.2677C37.3625 34.3227 38.2938 33.8065 39.1562 34.0963C40.0298 34.3987 40.5212 35.4058 40.2412 36.3382C39.39 39.2866 37.0051 46.5954 33.3987 46.5954C32.2563 46.5954 30.7206 46.5446 29.2534 44.9318C27.607 47.4518 25.5588 49.14 23.1284 49.14C17.9876 49.14 15.68 44.7436 15.68 40.384C15.68 35.7598 17.7865 30.304 22.5465 30.304C23.3529 30.304 24.0913 30.4679 24.7297 30.7199C24.6401 29.4599 24.64 28.4519 24.64 26.9399C24.64 26.8013 24.6847 13.86 29.3103 13.86ZM29.4437 17.704C28.7605 19.0144 27.9562 22.8428 27.9562 26.9252C27.9562 31.3604 28.4146 34.7632 29.109 37.2832C30.1506 34.045 30.2837 30.2778 30.2837 27.09C30.2837 21.0924 29.9701 18.5356 29.4437 17.704ZM22.5334 34.02C18.9718 34.02 19.04 40.2308 19.04 40.4702C19.04 42.0326 19.3638 45.36 23.0934 45.36C24.527 45.36 25.9849 44.0744 27.2169 41.8064C26.4665 40.2314 25.7601 37.7622 25.2897 35.28C25.2001 35.2044 25.1099 35.1295 25.0315 35.0413C25.0315 35.0413 23.9446 34.02 22.5334 34.02Z' />
 								</svg>
@@ -173,7 +176,7 @@ const Contact = forwardRef(
 								rel='noopener noreferrer'
 							>
 								<svg
-									className='socialsLogo'
+									className={ContactCss.socialsLogo}
 									width='56'
 									height='63'
 									viewBox='0 0 56 63'
@@ -195,7 +198,7 @@ const Contact = forwardRef(
 									viewBox='0 0 56 63'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'
-									className='socialsLogo'
+									className={ContactCss.socialsLogo}
 								>
 									<path d='M10.08 5.04004C6.98878 5.04004 4.47998 7.86244 4.47998 11.34V51.66C4.47998 55.1376 6.98878 57.96 10.08 57.96H45.92C49.0112 57.96 51.52 55.1376 51.52 51.66V11.34C51.52 7.86244 49.0112 5.04004 45.92 5.04004H10.08ZM13.44 22.68H20.9781C21.7957 22.68 26.2194 22.6174 26.2194 27.1786C26.2194 29.5978 24.7517 30.416 24.0909 30.7814C25.0765 31.1342 26.88 32.1552 26.88 35.28C26.88 40.1058 21.9627 40.32 21.3019 40.32H13.44V22.68ZM32.48 22.68H40.32V25.2H32.48V22.68ZM16.8 25.7414V29.8758H20.4072C20.9 29.8758 22.5334 29.5722 22.5334 27.72C22.5334 25.8678 20.406 25.7414 20.0812 25.7414H16.8ZM36.6581 26.46C41.0261 26.46 42.2123 30.2901 42.3915 31.1973C42.5595 32.1171 42.56 32.9238 42.56 34.02H33.7115C33.7115 35.1162 34.2279 37.5859 36.8375 37.5859C37.5319 37.5859 38.0458 37.3976 38.5722 37.0322C39.0874 36.6668 39.2682 36.3124 39.4362 35.947H42.3806C41.8654 37.396 41.1713 38.4941 40.1297 39.2249C39.0881 39.9557 37.8785 40.32 36.4897 40.32C35.6161 40.32 34.7536 40.1317 33.88 39.7663C33.1856 39.4009 32.4921 38.8586 31.9769 38.3168C31.4617 37.7624 31.1144 37.0313 30.7672 36.1241C30.42 35.3933 30.24 34.2972 30.24 33.39C30.24 32.4828 30.5653 26.46 36.6581 26.46ZM36.6581 29.017C34.1269 29.017 33.7115 31.7518 33.7115 31.9282H39.2678C39.0886 31.021 38.3605 29.017 36.6581 29.017ZM16.8 32.3958V37.2586H20.5537C20.8774 37.2586 23.1612 37.146 23.1612 34.9158C23.1612 32.6982 21.3668 32.3958 20.5537 32.3958H16.8Z' />
 								</svg>
