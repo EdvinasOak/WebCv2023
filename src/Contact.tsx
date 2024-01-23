@@ -1,8 +1,63 @@
-import { useEffect, useRef, forwardRef, ForwardedRef } from 'react';
+import {
+	useState,
+	useEffect,
+	useRef,
+	forwardRef,
+	ForwardedRef,
+	ChangeEvent,
+} from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = forwardRef(
 	(props, ref: ForwardedRef<HTMLDivElement | null>) => {
 		const contactRef = useRef<HTMLDivElement | null>(null);
+		const [email, setEmail] = useState('');
+		const [subject, setSubject] = useState('');
+		const [message, setMessage] = useState('');
+		const [emailError, setEmailError] = useState<string | null>(null);
+
+		const validateEmail = (email: string): boolean => {
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			return emailRegex.test(email);
+		};
+
+		const sendEmail = () => {
+			if (!validateEmail(email)) {
+				setEmailError('Please enter a valid email address.');
+				return;
+			}
+
+			const parameters = {
+				subject,
+				senderEmail: email,
+				message,
+			};
+
+			console.log('parameters', parameters);
+
+			emailjs
+				.send(
+					'service_3wh3nzf',
+					'template_nkymbvj',
+					parameters,
+					'euVcuBEjUXWTQjOgf'
+				)
+				.then(function (res) {
+					if (res.status === 200) {
+						alert('Email sent successfully.');
+						setEmail('');
+						setSubject('');
+						setMessage('');
+					} else {
+						alert('Encountered issue. Email was not sent.');
+					}
+				});
+		};
+
+		const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+			setEmail(e.target.value);
+			setEmailError(null); // Reset the email error when the user types
+		};
 
 		useEffect(() => {
 			if (ref) {
@@ -22,27 +77,40 @@ const Contact = forwardRef(
 					</div>
 					<div className='contactFormItem'>
 						<form className='contactForm'>
+							{emailError && <div className='error'>{emailError}</div>}
 							<input
 								className='email'
 								type='text'
 								placeholder='Email'
 								name='email'
+								value={email}
+								onChange={handleEmailChange}
 							/>
-							<br></br>
+							<br />
 							<input
 								className='subject'
 								type='text'
 								placeholder='Subject'
 								name='subject'
+								value={subject}
+								onChange={(e: ChangeEvent<HTMLInputElement>) =>
+									setSubject(e.target.value)
+								}
 							/>
 							<br></br>
 							<textarea
 								className='message'
 								placeholder='Message'
 								name='message'
+								value={message}
+								onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+									setMessage(e.target.value)
+								}
 							/>
 						</form>
-						<button type='button'>Submit</button>
+						<button onClick={sendEmail} type='button'>
+							Submit
+						</button>
 					</div>
 					<div className='blobContact' />
 					<div className='blobContact2' />
@@ -53,6 +121,7 @@ const Contact = forwardRef(
 							<a
 								href='https://www.linkedin.com/in/edvinasaukstakalnis/'
 								target='_blank'
+								rel='noopener noreferrer'
 							>
 								<svg
 									href='https://www.linkedin.com/in/edvinasaukstakalnis/'
@@ -66,7 +135,11 @@ const Contact = forwardRef(
 									<path d='M49.3333 0H6.66667C2.98667 0 0 3.36 0 7.5V55.5C0 59.64 2.98667 63 6.66667 63H49.3333C53.0133 63 56 59.64 56 55.5V7.5C56 3.36 53.0133 0 49.3333 0ZM17.3333 24V52.5H9.33333V24H17.3333ZM9.33333 15.705C9.33333 13.605 10.9333 12 13.3333 12C15.7333 12 17.24 13.605 17.3333 15.705C17.3333 17.805 15.84 19.5 13.3333 19.5C10.9333 19.5 9.33333 17.805 9.33333 15.705ZM46.6667 52.5H38.6667C38.6667 52.5 38.6667 38.61 38.6667 37.5C38.6667 34.5 37.3333 31.5 34 31.44H33.8933C30.6667 31.44 29.3333 34.53 29.3333 37.5C29.3333 38.865 29.3333 52.5 29.3333 52.5H21.3333V24H29.3333V27.84C29.3333 27.84 31.9067 24 37.08 24C42.3733 24 46.6667 28.095 46.6667 36.39V52.5Z' />
 								</svg>
 							</a>
-							<a href='https://codepen.io/EdOak2225' target='_blank'>
+							<a
+								href='https://codepen.io/EdOak2225'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<svg
 									width='67'
 									height='75'
@@ -78,7 +151,11 @@ const Contact = forwardRef(
 									<path d='M33.5001 6L5.36011 26.0156V48.9785L33.5001 69L61.6401 48.9844V26.0156L33.5001 6ZM33.5001 43.7754L25.5491 37.6055L33.5001 31.5352L41.4511 37.6055L33.5001 43.7754ZM36.1801 26.4082V14.9238L54.1759 27.7266L46.1097 33.9844L36.1801 26.4082ZM30.8201 26.4082L20.8905 33.9844L12.8243 27.7266L30.8201 14.9238V26.4082ZM16.2057 37.5645L10.7201 41.7481V33.3047L16.2057 37.5645ZM20.8643 41.1797L30.8201 48.9082V60.0762L12.8505 47.291L20.8643 41.1797ZM36.1801 48.9082L46.1359 41.1797L54.1497 47.291L36.1801 60.0762V48.9082ZM50.7945 37.5645L56.2801 33.3047V41.7481L50.7945 37.5645Z' />
 								</svg>
 							</a>
-							<a href='https://dribbble.com/SanDanGlokta' target='_blank'>
+							<a
+								href='https://dribbble.com/SanDanGlokta'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<svg
 									width='56'
 									height='63'
@@ -90,7 +167,11 @@ const Contact = forwardRef(
 									<path d='M10.08 5.04004C6.98878 5.04004 4.47998 7.86244 4.47998 11.34V51.66C4.47998 55.1376 6.98878 57.96 10.08 57.96H45.92C49.0112 57.96 51.52 55.1376 51.52 51.66V11.34C51.52 7.86244 49.0112 5.04004 45.92 5.04004H10.08ZM29.3103 13.86C31.5167 13.86 33.6 16.0902 33.6 27.09C33.6 31.0212 33.0054 36.7301 30.9334 41.4299C31.8294 42.7403 32.7264 43.155 33.32 42.84C35 41.9328 36.0745 38.7453 37.0825 35.2677C37.3625 34.3227 38.2938 33.8065 39.1562 34.0963C40.0298 34.3987 40.5212 35.4058 40.2412 36.3382C39.39 39.2866 37.0051 46.5954 33.3987 46.5954C32.2563 46.5954 30.7206 46.5446 29.2534 44.9318C27.607 47.4518 25.5588 49.14 23.1284 49.14C17.9876 49.14 15.68 44.7436 15.68 40.384C15.68 35.7598 17.7865 30.304 22.5465 30.304C23.3529 30.304 24.0913 30.4679 24.7297 30.7199C24.6401 29.4599 24.64 28.4519 24.64 26.9399C24.64 26.8013 24.6847 13.86 29.3103 13.86ZM29.4437 17.704C28.7605 19.0144 27.9562 22.8428 27.9562 26.9252C27.9562 31.3604 28.4146 34.7632 29.109 37.2832C30.1506 34.045 30.2837 30.2778 30.2837 27.09C30.2837 21.0924 29.9701 18.5356 29.4437 17.704ZM22.5334 34.02C18.9718 34.02 19.04 40.2308 19.04 40.4702C19.04 42.0326 19.3638 45.36 23.0934 45.36C24.527 45.36 25.9849 44.0744 27.2169 41.8064C26.4665 40.2314 25.7601 37.7622 25.2897 35.28C25.2001 35.2044 25.1099 35.1295 25.0315 35.0413C25.0315 35.0413 23.9446 34.02 22.5334 34.02Z' />
 								</svg>
 							</a>
-							<a href='https://github.com/EdvinasOak' target='_blank'>
+							<a
+								href='https://github.com/EdvinasOak'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<svg
 									className='socialsLogo'
 									width='56'
@@ -102,7 +183,11 @@ const Contact = forwardRef(
 									<path d='M19.9259 59.0134C20.7222 58.6278 21.28 57.737 21.28 56.7V49.896C21.28 49.6478 21.2979 49.3895 21.3259 49.1274C21.3102 49.1325 21.2957 49.1362 21.28 49.14C21.28 49.14 17.92 49.14 17.248 49.14C15.568 49.14 14.112 48.384 13.44 46.872C12.656 45.234 12.32 42.462 10.304 40.95C9.96799 40.698 10.192 40.32 10.864 40.32C11.536 40.446 12.992 41.454 13.888 42.84C14.896 44.226 15.904 45.36 17.696 45.36C20.4814 45.36 21.9744 45.2025 22.8726 44.6607C23.9187 42.9106 25.3669 41.58 26.88 41.58V41.5485C20.5318 41.3192 16.4763 38.9454 14.588 35.28C10.4832 35.3329 6.90927 35.7903 4.86975 36.1708C4.80479 35.7588 4.74879 35.3443 4.70063 34.9272C6.71327 34.5543 10.1248 34.112 14.047 34.0276C13.9216 33.6798 13.813 33.3232 13.7211 32.9578C9.78879 32.7336 6.39519 32.9087 4.55167 33.0801C4.52927 32.6617 4.49903 32.2447 4.49455 31.8213C6.34143 31.6512 9.64319 31.4811 13.4747 31.6815C13.3862 31.0515 13.3291 30.4076 13.3291 29.7373C13.3291 27.5953 14.0011 25.3273 15.2331 23.4373C14.6731 21.2953 13.8891 16.7593 15.4571 15.1213C18.4811 15.1213 20.6091 16.7593 21.6171 17.7673C23.52 16.884 25.648 16.38 28 16.38C30.352 16.38 32.48 16.884 34.272 17.766C35.28 16.758 37.408 15.12 40.432 15.12C42.112 16.884 41.216 21.42 40.656 23.436C41.888 25.326 42.56 27.468 42.448 29.736C42.448 30.3459 42.3976 30.9343 42.3248 31.5114C46.2437 31.2946 49.635 31.4685 51.5133 31.6399C51.511 32.0645 51.4763 32.479 51.4562 32.8986C49.5846 32.7247 46.1082 32.5458 42.0941 32.7865C41.9944 33.2098 41.8734 33.6219 41.7301 34.0213C45.7016 34.0792 49.1949 34.5114 51.3038 34.8894C51.2557 35.3077 51.1997 35.7223 51.1347 36.133C48.9933 35.7475 45.3432 35.2964 41.1902 35.2737C39.3254 38.9 35.3438 41.265 29.12 41.541V41.58C32.032 41.58 34.72 46.494 34.72 49.896V56.7C34.72 57.737 35.2777 58.6278 36.0741 59.0134C46.3344 55.1931 53.76 44.3067 53.76 31.5C53.76 15.5207 42.2049 2.52002 28 2.52002C13.795 2.52002 2.23999 15.5207 2.23999 31.5C2.23999 44.3067 9.66559 55.1931 19.9259 59.0134Z' />
 								</svg>
 							</a>
-							<a href='https://www.behance.net/edvinasaukstak' target='_blank'>
+							<a
+								href='https://www.behance.net/edvinasaukstak'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<svg
 									href=''
 									width='56'
