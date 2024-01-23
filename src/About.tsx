@@ -29,8 +29,8 @@ const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 								Seeking to collaborate with experienced teams to deliver an
 								exceptional user experience.
 								<p />
-								When not coding I enjoy weight lifting, cooking, hiking, gaming
-								and reading. Click here to find out what I'm reading wright now.
+								{/* When not coding I enjoy weight lifting, cooking, hiking, gaming
+								and reading. Click here to find out what I'm reading wright now. */}
 							</div>
 						</div>
 						<div className='topImageItem'>

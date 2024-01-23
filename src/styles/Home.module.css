@@ -1,0 +1,162 @@
+/* Home */
+
+.Home {
+    height: 100vh;
+    width: 100vw;
+}
+
+.homeHeroTextContainer {
+    text-align: left !important;
+    line-height: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.homeHeroText1 {
+    /* use clamp */
+    /* font-size: 9vh; */
+    font-size: 5vw;
+    color: #FFFFFE;
+    font-weight: 700;
+}
+
+.homeHeroText2 {
+    /* font-size: 9vh; */
+    font-size: 5vw;
+    color: #FF8906;
+    font-weight: 700;
+}
+
+.homeHeroText3 {
+    font-size: 2vw;
+    color: #A7A9BE;
+    font-weight: 300;
+    line-height: 1vh;
+}
+
+.homeGridColumnItem1 {
+    grid-area: homeGridColumnItem1;
+    height: 100%;
+
+}
+
+.homeGridColumnItem2 {
+    grid-area: homeGridColumnItem2;
+    height: 100%;
+
+}
+
+.homeGridColumnItem3 {
+    grid-area: homeGridColumnItem3;
+    height: 100%;
+
+}
+
+.homeGridColumn2Item1 {
+    grid-area: homeGridColumn2Item1;
+    height: 100%;
+
+}
+
+.homeGridColumn2Item2 {
+    grid-area: homeGridColumn2Item2;
+    height: 100%;
+
+}
+
+.homeGridColumn2Item3 {
+    grid-area: homeGridColumn2Item3;
+    height: 100%;
+
+}
+
+.homeGridColumn3Item1 {
+    grid-area: homeGridColumn3Item1;
+    height: 100%;
+
+}
+
+.homeGridColumn3Item2 {
+    grid-area: homeGridColumn3Item2;
+    height: 100%;
+
+}
+
+.homeGridColumn3Item3 {
+    grid-area: homeGridColumn3Item3;
+    height: 100%;
+    background-color: #E53170;
+}
+
+.homeGridContainer {
+    display: grid;
+    grid-template-columns: 50vw 25vw 25vw;
+    grid-template-areas:
+        'homeGridColumnItem1  homeGridColumn2Item1 homeGridColumn3Item1'
+        'homeGridColumnItem2 homeGridColumn2Item2 homeGridColumn3Item2'
+        'homeGridColumnItem3 homeGridColumn2Item3   homeGridColumn3Item3';
+}
+
+@media (width < 1024px) {
+    .homeHeroText1 {
+        /* use clamp */
+        /* font-size: 9vh; */
+        font-size: 8vw;
+    }
+
+    .homeHeroText2 {
+        font-size: 8vw;
+    }
+
+    .homeHeroText3 {
+        font-size: 3vw;
+    }
+
+    .homeGridContainer {
+        grid-template-columns: 100vw;
+        grid-template-areas:
+            'homeGridColumnItem1 '
+            'homeGridColumnItem2'
+            'homeGridColumnItem3';
+    }
+}
+
+@media (width < 900px) {
+    .homeHeroText1 {
+        /* use clamp */
+        /* font-size: 9vh; */
+        font-size: 10vw;
+    }
+
+    .homeHeroText2 {
+        font-size: 10vw;
+    }
+
+    .homeHeroText3 {
+        font-size: 4vw;
+    }
+
+    @media (width < 450px) {
+        .homeHeroTextContainer {
+            top: 25%;
+            line-height: 3vh;
+        }
+
+        .homeHeroText1 {
+            /* use clamp */
+            /* font-size: 9vh; */
+            font-size: 12vw;
+        }
+
+        .homeHeroText2 {
+            font-size: 12vw;
+        }
+
+        .homeHeroText3 {
+            font-size: 4.3vw;
+        }
+    }
+
+}
