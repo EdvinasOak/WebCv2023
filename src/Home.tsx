@@ -1,5 +1,6 @@
 import { useEffect, useRef, forwardRef, ForwardedRef } from 'react';
 import HomeCss from './styles/Home.module.css';
+import { ReactTyped } from 'react-typed';
 
 const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	const homeRef = useRef<HTMLDivElement | null>(null);
@@ -23,10 +24,21 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 					<div className={HomeCss.homeHeroTextContainer}>
 						<a className={HomeCss.homeHeroText1}>Hi, I’m Ed.</a>
 						<br />
-						<a className={HomeCss.homeHeroText2}>Web Developer</a>
+						<a className={HomeCss.homeHeroText2}>Web Developer.</a>
 						<br />
 						<a className={HomeCss.homeHeroText3}>
-							I like to craft exceptional user experiences
+							<ReactTyped
+								strings={[
+									'I convert coffee into ^400 lines of code ^1000',
+									'I convert coffee into ^400 digital solutions ^1000',
+									'I convert coffee into ^400 seamless web experience ^1000',
+									'I convert ^400 ideas into ^500 products ^10000',
+								]}
+								typeSpeed={40}
+								backSpeed={50}
+								loop
+								smartBackspace={true}
+							></ReactTyped>
 						</a>
 					</div>
 					<div className={HomeCss.homeGridColumnItem3}></div>
