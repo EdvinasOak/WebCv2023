@@ -116,9 +116,10 @@ const Contact = forwardRef(
 							Submit
 						</button>
 					</div>
-					<div className={ContactCss.blobContact} />
-					<div className={ContactCss.blobContact2} />
-					<div className={ContactCss.blobContact3} />
+					<div className={ContactCss.contactBlobContainer}>
+						<div className={ContactCss.blobContact} />
+						<span className={ContactCss.blobContact2} />
+					</div>
 
 					<div className={ContactCss.contactSocialsItem}>
 						<div className={ContactCss.socialsContainer}>

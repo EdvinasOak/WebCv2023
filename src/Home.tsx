@@ -18,7 +18,7 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	return (
 		<div ref={homeRef} className={HomeCss.Home}>
 			<div className={HomeCss.homeGridContainer}>
-				<div className={HomeCss.homeGridColumnItem1}>a</div>
+				<div className={HomeCss.homeGridColumnItem1}></div>
 				<div className={HomeCss.homeGridColumnItem2}>
 					<div className={HomeCss.homeHeroTextContainer}>
 						<a className={HomeCss.homeHeroText1}>Hi, I’m Ed.</a>

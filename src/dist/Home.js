@@ -17,7 +17,7 @@ var Home = react_1.forwardRef(function (props, ref) {
     }, [ref]);
     return (React.createElement("div", { ref: homeRef, className: Home_module_css_1["default"].Home },
         React.createElement("div", { className: Home_module_css_1["default"].homeGridContainer },
-            React.createElement("div", { className: Home_module_css_1["default"].homeGridColumnItem1 }, "a"),
+            React.createElement("div", { className: Home_module_css_1["default"].homeGridColumnItem1 }),
             React.createElement("div", { className: Home_module_css_1["default"].homeGridColumnItem2 },
                 React.createElement("div", { className: Home_module_css_1["default"].homeHeroTextContainer },
                     React.createElement("a", { className: Home_module_css_1["default"].homeHeroText1 }, "Hi, I\u2019m Ed."),

@@ -70,9 +70,9 @@ var Contact = react_1.forwardRef(function (props, ref) {
                             return setMessage(e.target.value);
                         } })),
                 React.createElement("button", { onClick: sendEmail, type: 'button' }, "Submit")),
-            React.createElement("div", { className: Contact_module_css_1["default"].blobContact }),
-            React.createElement("div", { className: Contact_module_css_1["default"].blobContact2 }),
-            React.createElement("div", { className: Contact_module_css_1["default"].blobContact3 }),
+            React.createElement("div", { className: Contact_module_css_1["default"].contactBlobContainer },
+                React.createElement("div", { className: Contact_module_css_1["default"].blobContact }),
+                React.createElement("span", { className: Contact_module_css_1["default"].blobContact2 })),
             React.createElement("div", { className: Contact_module_css_1["default"].contactSocialsItem },
                 React.createElement("div", { className: Contact_module_css_1["default"].socialsContainer },
                     React.createElement("a", { href: 'https://www.linkedin.com/in/edvinasaukstakalnis/', target: '_blank', rel: 'noopener noreferrer' },

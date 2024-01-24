@@ -1,4 +1,7 @@
 import { useEffect, useRef, forwardRef, ForwardedRef } from 'react';
+import BlobAbout2 from './assets/blobAbout2.svg'; // Import the images
+import BlobAbout1 from './assets/aboutBlob1.svg'; // Import the images
+import smallBlob from './assets/smallBlob.svg'; // Import the images
 
 const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -34,32 +37,16 @@ const About = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 							</div>
 						</div>
 						<div className='topImageItem'>
-							<img
-								className='blobAbout2'
-								src='src/assets/blobAbout2.svg'
-								alt='My Happy SVG'
-							/>
+							<img className='blobAbout2' src={BlobAbout2} alt='My Happy SVG' />
 						</div>
 						<div className='centerImageItem'>
-							<img
-								className='blobAbout'
-								src='src/assets/aboutBlob1.svg'
-								alt='My Happy SVG'
-							/>
+							<img className='blobAbout' src={BlobAbout1} alt='My Happy SVG' />
 						</div>
 						<div className='bottomImageItem'>
-							<img
-								className='leftBlob'
-								src='src/assets/blobAbout2.svg'
-								alt='My Happy SVG'
-							/>
+							<img className='leftBlob' src={BlobAbout2} alt='My Happy SVG' />
 						</div>
 						<div className='bottomImageItemLeft'>
-							<img
-								className='blobAbout3'
-								src='src/assets/smallBlob.svg'
-								alt='My Happy SVG'
-							/>
+							<img className='blobAbout3' src={smallBlob} alt='My Happy SVG' />
 						</div>
 					</div>
 				</div>
