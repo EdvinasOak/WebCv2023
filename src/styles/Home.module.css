@@ -380,7 +380,7 @@
     .semicolonMobile {
         display: flex;
         left: 10vw;
-        top: 10vh;
+        top: 3vh;
     }
 
     .squareBrackets {
@@ -388,6 +388,6 @@
     }
 
     .and2 {
-        top: 5vh;
+        top: -2vh;
     }
 }

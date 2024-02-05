@@ -34,7 +34,10 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 						<a className={HomeCss.homeHeroText3}>
 							<ReactTyped
 								strings={[
+									'^800 I convert coffee into ^400 lines of code ^1000',
+									'I convert coffee into ^400 digital solutions ^1000',
 									'I convert coffee into ^400 seamless web experiences ^1000',
+									'I convert ^400 ideas into ^500 reality ^10000',
 								]}
 								typeSpeed={40}
 								backSpeed={50}
@@ -47,7 +50,6 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 				<div className={HomeCss.homeGridColumnItem3}>
 					<span className={HomeCss.squareBrackets}>{'[ ]'}</span>
 					<span className={HomeCss.and2}>{'&&'}</span>
-					<span className={HomeCss.semicolonMobile}>{';'}</span>
 				</div>
 
 				<div className={HomeCss.homeGridColumn2Item1}>
