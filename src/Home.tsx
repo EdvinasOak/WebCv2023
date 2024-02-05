@@ -19,7 +19,12 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 	return (
 		<div ref={homeRef} className={HomeCss.Home}>
 			<div className={HomeCss.homeGridContainer}>
-				<div className={HomeCss.homeGridColumnItem1}></div>
+				<div className={HomeCss.homeGridColumnItem1}>
+					<span className={HomeCss.curlyBrace}>{'{ }'}</span>
+					<span className={HomeCss.notEqualMobile}>{'!='}</span>
+
+					<span className={HomeCss.dblApostrophe}>{'" "'}</span>
+				</div>
 				<div className={HomeCss.homeGridColumnItem2}>
 					<div className={HomeCss.homeHeroTextContainer}>
 						<a className={HomeCss.homeHeroText1}>Hi, I’m Ed.</a>
@@ -29,10 +34,7 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 						<a className={HomeCss.homeHeroText3}>
 							<ReactTyped
 								strings={[
-									'I convert coffee into ^400 lines of code ^1000',
-									'I convert coffee into ^400 digital solutions ^1000',
-									'I convert coffee into ^400 seamless web experience ^1000',
-									'I convert ^400 ideas into ^500 products ^10000',
+									'I convert coffee into ^400 seamless web experiences ^1000',
 								]}
 								typeSpeed={40}
 								backSpeed={50}
@@ -41,15 +43,33 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 							></ReactTyped>
 						</a>
 					</div>
-					<div className={HomeCss.homeGridColumnItem3}></div>
+				</div>
+				<div className={HomeCss.homeGridColumnItem3}>
+					<span className={HomeCss.squareBrackets}>{'[ ]'}</span>
+					<span className={HomeCss.and2}>{'&&'}</span>
+					<span className={HomeCss.semicolonMobile}>{';'}</span>
+				</div>
 
-					<div className={HomeCss.homeGridColumn2Item1}></div>
-					<div className={HomeCss.homeGridColumn2Item2}></div>
-					<div className={HomeCss.homeGridColumn2Item3}></div>
+				<div className={HomeCss.homeGridColumn2Item1}>
+					<span className={HomeCss.and}>{'&&'}</span>
+					<span className={HomeCss.notEqual}>{'!='}</span>
+				</div>
+				<div className={HomeCss.homeGridColumn2Item2}>
+					<span className={HomeCss.dollarSign}>{'$'}</span>
+				</div>
+				<div className={HomeCss.homeGridColumn2Item3}>
+					<span className={HomeCss.backticks}>{"' '"}</span>
+				</div>
 
-					<div className={HomeCss.homeGridColumn3Item1}></div>
-					<div className={HomeCss.homeGridColumn3Item2}></div>
-					<div className={HomeCss.homeGridColumn3Item3}></div>
+				<div className={HomeCss.homeGridColumn3Item1}>
+					<span className={HomeCss.equal}>{'=='}</span>
+					<span className={HomeCss.closingTag}>{'</>'}</span>
+				</div>
+				<div className={HomeCss.homeGridColumn3Item2}>
+					<span className={HomeCss.semicolon}>{';'}</span>
+				</div>
+				<div className={HomeCss.homeGridColumn3Item3}>
+					<span className={HomeCss.lessOrEqual}>{'<='}</span>
 				</div>
 			</div>
 		</div>
