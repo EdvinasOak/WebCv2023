@@ -6,7 +6,7 @@
 
   .aboutHeroTxt {
     font-size: 8vw;
-    color: #FF8906;
+    color: #FBAE3C;
     font-weight: 800;
     letter-spacing: 0.1vw;
     position: relative;
@@ -248,7 +248,7 @@
 
   .skillsHeroTxt {
     font-size: 8vw;
-    color: #FF8906;
+    color: #FBAE3C;
     font-weight: 800;
     letter-spacing: 0.1vw;
     left: 8%;
@@ -269,7 +269,7 @@
 
   .experienceHeroTxt {
     font-size: 8vw;
-    color: #FF8906;
+    color: #FBAE3C;
     font-weight: 800;
     letter-spacing: 0.1vw;
 
@@ -365,7 +365,7 @@
 .circle {
   height: 25px;
   width: 25px;
-  background-color: #FF8906;
+  background-color: #FBAE3C;
   border-radius: 50%;
   display: block;
   margin: auto;
@@ -445,5 +445,15 @@
 
   .experienceHeroTxt {
     font-size: 15vw !important;
+  }
+}
+
+@media screen and (width > 1500px) {
+  .aboutText {
+    font-size: 2.3em !important;
+  }
+
+  .descriptionItem {
+    font-size: 2.3em;
   }
 }

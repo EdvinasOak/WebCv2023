@@ -29,14 +29,41 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 					<div className={HomeCss.homeHeroTextContainer}>
 						<a className={HomeCss.homeHeroText1}>Hi, I’m Ed.</a>
 						<br />
-						<a className={HomeCss.homeHeroText2}>Web Developer.</a>
-						<br />
+					</div>
+
+					<div className={HomeCss.svgContainer}>
+						<svg
+							className={HomeCss.knockoutTextContainer}
+							style={{ borderRadius: '16px' }}
+							viewBox='0 0 980 145'
+							preserveAspectRatio='xMidYMid meet'
+						>
+							<rect
+								className={HomeCss.knockoutTextBg}
+								fillOpacity='1'
+								mask='url(#knockout-text)'
+							/>
+
+							<mask id='knockout-text'>
+								<rect width='100%' height='100%' fill='#fff' x='0' y='0' />
+								<text
+									x='50%'
+									y='55%'
+									fill='#000'
+									textAnchor='middle'
+									dominantBaseline='middle'
+								>
+									Web Developer.
+								</text>
+							</mask>
+						</svg>
+
 						<a className={HomeCss.homeHeroText3}>
 							<ReactTyped
 								strings={[
 									'^800 I convert coffee into ^400 lines of code ^1000',
 									'I convert coffee into ^400 digital solutions ^1000',
-									'I convert coffee into ^400 seamless web experiences ^1000',
+									'I convert coffee into ^400 seamless web experience ^1000',
 									'I convert ^400 ideas into ^500 reality ^10000',
 								]}
 								typeSpeed={40}
@@ -50,6 +77,7 @@ const Home = forwardRef((props, ref: ForwardedRef<HTMLDivElement | null>) => {
 				<div className={HomeCss.homeGridColumnItem3}>
 					<span className={HomeCss.squareBrackets}>{'[ ]'}</span>
 					<span className={HomeCss.and2}>{'&&'}</span>
+					<span className={HomeCss.semicolonMobile}>{';'}</span>
 				</div>
 
 				<div className={HomeCss.homeGridColumn2Item1}>

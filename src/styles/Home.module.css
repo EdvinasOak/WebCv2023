@@ -10,9 +10,40 @@
     text-align: left !important;
     line-height: 5vh;
     position: absolute;
-    top: 50%;
+    top: 40vh;
     left: 5%;
     transform: translateY(-50%);
+}
+
+.transparentText {
+    background: #0F0E17;
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.knockoutTextContainer {
+    /* width: 40vw;
+    height: 7.8vh; */
+}
+
+.svgContainer {
+    top: 9vh;
+    width: 28vw;
+    height: 7.8vh;
+    position: relative;
+    left: 10%;
+    line-height: 5vh;
+    font-size: 6vw;
+    font-weight: 700;
+}
+
+.knockoutTextBg {
+    fill: #FBAE3C;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 .homeHeroText1 {
@@ -23,18 +54,17 @@
     font-weight: 700;
 }
 
-.homeHeroText2 {
-    /* font-size: 9vh; */
-    font-size: 5vw;
-    color: #FF8906;
-    font-weight: 700;
-}
 
 .homeHeroText3 {
+    /* top: 37%; */
+    display: block;
+    top: 2vh;
+    position: relative;
     font-size: 2vw;
     color: #A7A9BE;
     font-weight: 300;
     line-height: 1vh;
+    width: 100vw;
 }
 
 .homeGridColumnItem1 {
@@ -254,7 +284,9 @@
     display: inline-block;
 }
 
-@media screen and (width < 1024px) {
+
+
+@media screen and (width < 1284px) {
     .homeHeroText1 {
         /* use clamp */
         /* font-size: 9vh; */
@@ -262,11 +294,24 @@
     }
 
     .homeHeroText2 {
-        font-size: 8vw;
+        font-size: 6.5vw;
     }
 
     .homeHeroText3 {
         font-size: 3vw;
+        top: 35%;
+    }
+
+    .dollarSign {
+        left: 12vw;
+    }
+
+    .svgContainer {
+        top: 10vh;
+        line-height: 2vh;
+        font-size: 10vw;
+        width: 45vw;
+        height: 9.8vh;
     }
 
 }
@@ -293,7 +338,7 @@
     }
 
     .dblApostrophe {
-        top: 1vh;
+        top: -14vh;
     }
 
     .and {
@@ -319,7 +364,7 @@
     }
 
     .homeHeroText2 {
-        font-size: 10vw;
+        font-size: 8.5vw;
     }
 
     .homeHeroText3 {
@@ -334,8 +379,27 @@
 
     .dollarSign {
         top: 25vh;
+        left: 10vw;
     }
 
+    .svgContainer {
+        top: 9.2vh;
+        line-height: 2vh;
+        font-size: 14vw;
+        width: 50vw;
+        height: 9.8vh;
+    }
+
+}
+
+@media screen and (width < 650px) {
+    .svgContainer {
+        top: 8vh;
+        line-height: 2vh;
+        font-size: 18vw;
+        width: 70vw;
+        height: 9.8vh;
+    }
 }
 
 @media screen and (width < 450px) {
@@ -349,7 +413,6 @@
     }
 
     .homeHeroTextContainer {
-        /* top: 25%; */
         line-height: 3vh;
     }
 
@@ -360,11 +423,11 @@
     }
 
     .homeHeroText2 {
-        font-size: 12vw;
+        font-size: 12.2vw;
     }
 
     .homeHeroText3 {
-        font-size: 4.3vw;
+        font-size: 4vw;
     }
 
     .curlyBrace {
@@ -389,5 +452,39 @@
 
     .and2 {
         top: -2vh;
+    }
+
+    .dblApostrophe {
+        top: -2vh;
+    }
+
+    .svgContainer {
+        top: 8.5vh;
+        left: 4%;
+        line-height: 2vh;
+        font-size: 25vw;
+        width: 85vw !important;
+        height: 12.8vh !important;
+    }
+
+    .homeHeroText3 {
+        top: 2vh;
+    }
+
+}
+
+@media screen and (width < 340px) {
+    .svgContainer {
+        top: 7.8vh;
+    }
+
+    .homeHeroText3 {
+        top: 1vh;
+    }
+}
+
+@media screen and (width > 1500px) {
+    .svgContainer {
+        font-size: 5vw;
     }
 }

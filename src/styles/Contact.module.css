@@ -7,7 +7,7 @@
 
     .contactHeroTxt {
         font-size: 8vw;
-        color: #FF8906;
+        color: #FBAE3C;
         font-weight: 800;
         letter-spacing: 0.1vw;
 
@@ -285,7 +285,7 @@ button {
         ;
 
         gap: 10px;
-        padding-top: 5vw;
+        /* padding-top: 5vw; */
     }
 
 
