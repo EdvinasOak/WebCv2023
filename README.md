@@ -1,6 +1,6 @@
 # WebCV2023
 
-This project is a personal website developed using React. It serves as an online CV for Edvinas, showcasing his skills, projects, and experience.
+This project is a personal website developed using React. It serves as an online CV, showcasing skills, projects, and experience.
 
 # Live Demo
 
