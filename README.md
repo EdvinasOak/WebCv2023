@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# WebCV2023
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal website developed using React. It serves as an online CV for Edvinas, showcasing his skills, projects, and experience.
 
-Currently, two official plugins are available:
+# Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view the live demo of this project [here](https://edvinasoak.github.io/WebCv2023/).
 
-## Expanding the ESLint configuration
+# Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run this project locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository:
+   `git clone https://github.com/edvinasoak/WebCv2023.git`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Navigate to the project directory:
+   `cd WebCv2023`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Install dependencies:
+   `npm install`
+
+## Getting Started
+
+To get started with this project, follow the instructions below:
+
+1. Clone this repository to your local machine, using `git clone https://github.com/edvinasoak/WebCv2023.git`.
+2. Navigate to the project directory, using `cd WebCv2023`.
+3. Install dependencies using `npm install`.
+4. Run the development server using `npm run dev`.
+5. Open your browser and visit [http://localhost:5173](http://localhost:5173) to view the application.
+
+# Scripts
+
+- dev: Start the development server.
+- predeploy: Build the project before deployment.
+- build: Build the project.
+- lint: Lint the project files.
+- preview: Preview the project.
+
+# Technologies Used
+
+- React
+- TypeScript
+- Vite
+- EmailJS
+- React Spring
+- React Typed
+
+# Contributors
+
+[Edvinas Oak](https://github.com/EdvinasOak)
