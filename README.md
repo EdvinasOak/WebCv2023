@@ -6,19 +6,6 @@ This project is a personal website developed using React. It serves as an online
 
 You can view the live demo of this project [here](https://edvinasoak.github.io/WebCv2023/).
 
-# Installation
-
-To run this project locally, follow these steps:
-
-1. Clone the repository:
-   `git clone https://github.com/edvinasoak/WebCv2023.git`
-
-2. Navigate to the project directory:
-   `cd WebCv2023`
-
-3. Install dependencies:
-   `npm install`
-
 ## Getting Started
 
 To get started with this project, follow the instructions below:
